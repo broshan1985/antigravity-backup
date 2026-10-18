@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export GIT_SSH_COMMAND="ssh -o BatchMode=yes -o StrictHostKeyChecking=accept-new"
+
 BACKUP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TEMP_DIR="$BACKUP_DIR/data"
 ARCHIVE="$BACKUP_DIR/antigravity_data.tar.gz"
